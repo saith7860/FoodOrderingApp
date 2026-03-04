@@ -7,8 +7,9 @@ import products from '@/assets/data/product';
 export default function MenuScreen() {
  return(
   <View>
-    <ProductListItem product={products[1]}/>
+    <ProductListItem product={products[3]}/>
     <ProductListItem product={products[2]}/>
+    <ProductListItem product={products[4]}/>
   </View>
  )
 }
