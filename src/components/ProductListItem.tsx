@@ -1,5 +1,6 @@
 import products from '@assets/data/product';
-import { StyleSheet,Image,View,Text } from 'react-native';
+import { StyleSheet,Image,View,Text,Pressable } from 'react-native';
+import { Link } from 'expo-router';
 import { Product } from 'types/type';
 export const defaultPizzaImage='https://notjustdev-dummy.s3.us-east-2.amazonaws.com/food/margarita.png'
 type ProductList={
@@ -8,19 +9,21 @@ type ProductList={
 const ProductListItem=({product}:ProductList)=>{
   
    return (
-   <View>
+    <Link href={`/${product.id}`} asChild>
+   <Pressable>
   <Image style={styles.img} resizeMode='contain' source={{uri:product.image||defaultPizzaImage}}/>
   <Text style={styles.title}>{product.name}</Text>
   <Text style={styles.price}>${product.price}</Text>
 
-   </View>
+   </Pressable>
+   </Link>
   );
 }
 export default ProductListItem;
 const styles = StyleSheet.create({
   container:{
     flex:1,
-    backgroundColor:"white",
+    backgroundColor:"blue",
     borderRadius:"10",
     maxWidth:'50%'
   },

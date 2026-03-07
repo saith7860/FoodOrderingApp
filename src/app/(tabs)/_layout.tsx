@@ -21,16 +21,16 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Tab One',
+          title: 'Menu',
           tabBarIcon: ({ color }) => (
             <SymbolView
               name={{
                 ios: 'chevron.left.forwardslash.chevron.right',
-                android: 'code',
-                web: 'code',
+                android: 'menu',
+                web: 'menu',
               }}
               tintColor={color}
-              size={28}
+              size={24}
             />
           ),
           headerRight: () => (
@@ -52,16 +52,16 @@ export default function TabLayout() {
       <Tabs.Screen
         name="two"
         options={{
-          title: 'Tab Two',
+          title: 'List',
           tabBarIcon: ({ color }) => (
             <SymbolView
               name={{
                 ios: 'chevron.left.forwardslash.chevron.right',
-                android: 'code',
-                web: 'code',
+                android: 'list',
+                web: 'list',
               }}
               tintColor={color}
-              size={28}
+              size={24}
             />
           ),
         }}
